@@ -1,0 +1,62 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import 'bootstrap/dist/css/bootstrap.css';
+import './App.css'
+import Navbar from './Components/Navbar'
+import Hero from './Components/Hero'
+import Cards from './Components/Cards'
+import { Route } from 'react-router-dom'
+import { Routes } from 'react-router-dom'
+import Footer from './Components/Footer'
+import ContextProvider from './Store/ContextProvide';
+import Cart from './Pages/Cart';
+
+
+function App() {
+ 
+  //data set
+  const shoeData = [
+    {id:1 , img:"/images/shoe1.jpg",name:'shoe1', content:'lorem', quantity:1, price: 500.00},
+    {id:2 , img:"/images/shoe2.jpg",name:'shoe2', content:'lorem', quantity:1, price: 500.00},
+    {id:3 , img:"/images/shoe3.jpg",name:'shoe3', content:'lorem', quantity:1, price: 500.00},
+    {id:4 , img:"/images/shoe4.jpg",name:'shoe4', content:'lorem', quantity:1, price: 500.00},
+    {id:5 , img:"/images/shoe5.jpg",name:'shoe5', content:'lorem', quantity:1, price: 500.00},
+    {id:6 , img:"/images/shoe6.jpg",name:'shoe6', content:'lorem', quantity:1, price: 500.00},
+    {id:7 , img:"/images/shoe7.jpg",name:'shoe7', content:'lorem', quantity:1, price: 500.00},
+    {id:8 , img:"/images/shoe8.jpg",name:'shoe8', content:'lorem', quantity:1, price: 500.00},
+    {id:9 , img:"/images/shoe9.jpg",name:'shoe9', content:'lorem', quantity:1, price: 500.00},
+    {id:10 , img:"/images/shoe10.jpg",name:'shoe10', content:'lorem', quantity:1, price: 500.00},
+    {id:11 , img:"/images/shoe11.jpg",name:'shoe11', content:'lorem', quantity:1, price: 500.00},
+    {id:8 , img:"/images/shoe12.jpg",name:'shoe12', content:'lorem', quantity:1, price: 500.00},
+    {id:9 , img:"/images/shoe13.jpg",name:'shoe13', content:'lorem', quantity:1, price: 500.00},
+    {id:10 , img:"/images/shoe14.jpg",name:'shoe14', content:'lorem', quantity:1, price: 500.00},
+    {id:11 , img:"/images/shoe15.jpg",name:'shoe15', content:'lorem', quantity:1, price: 500.00},
+    {id:11 , img:"/images/shoe16.jpg",name:'shoe16', content:'lorem', quantity:1, price: 500.00},
+
+  ];
+
+  return (
+    <>
+    <ContextProvider>
+    <Navbar></Navbar>
+    {/* <Hero></Hero>*/}
+    
+    {/* Routes one render and page reload whole page so we use the Links tag then will not reload , links can be used in component itself like in header (home , support instead of 'a' tag*/}
+    <Routes>
+    <Route path="/" element={
+          <>
+            <Hero />
+            <Cards shoeData={shoeData} />  {/* Only on Home Page */}
+          </>
+        } />
+    <Route path="/cart" element={<Cart />} />
+    </Routes> 
+   
+   <Footer></Footer>
+   </ContextProvider>
+    </>
+  )
+}
+
+export default App

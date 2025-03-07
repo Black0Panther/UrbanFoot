@@ -1,15 +1,22 @@
 import { useContext } from "react";
 import { totalItem,totalPrice } from "../Store/CardReducer";
 import { CartContext } from "../Store/ContextProvide";
+import { useNavigate } from "react-router-dom";
 
 const CheckOut=()=>{
     const {cart} = useContext(CartContext)
+    const nav =useNavigate();
+    const handleCheckoutform=()=>{
+       nav('/Checkoutform');
+    }
     return <>
      <div className="check_container">
         <div className="checkout">
-            <h5>Total Items : {totalItem(cart)}</h5>
+            <h4>Order Summary</h4>
+            <p>Sub total:</p>
+            <p>Total Items : {totalItem(cart)}</p>
             <h5>Total Price : ${totalPrice(cart)}</h5>
-            <button>Check Out</button>
+            <button onClick={handleCheckoutform}>Check Out</button>
         </div>
      </div>
     

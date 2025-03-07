@@ -1,0 +1,22 @@
+ <div className="cart_container">
+        <div className="img">
+        <img src={shoeData.img} alt="" height={'80px'} width={'80px'}/>
+        </div>
+        <div className="content">
+            <h2>{shoeData.name}</h2>
+            <h3>{shoeData.price}</h3>
+            <p>{shoeData.content}</p>
+            <div className="cart_quantity_buttons">
+                <button  onClick={()=>Decrease(shoeData.id)}>-</button>
+                <button>{shoeData.quantity}</button>
+                <button onClick={()=>Increase(shoeData.id)}>+</button>
+                <button onClick={()=>Remove(shoeData.id)}>Remove</button>
+            </div>
+        </div>
+     </div>
+     {cart.length > 0 && (
+                 <div className="check">
+                   <CheckOut />
+                 </div>
+               )}
+   

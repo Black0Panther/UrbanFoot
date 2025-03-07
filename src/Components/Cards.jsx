@@ -3,7 +3,7 @@ import Card from "./Card"
 
 const Cards=({shoeData})=>{
     return <>
-        <h1 className="Cards_heading">Top Sneakers</h1>   
+        {/* <h1 className="Cards_heading">Top Sneakers</h1>    */}
     <div className="cards_container">
       {
         shoeData.map(shoe=>{

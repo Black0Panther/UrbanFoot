@@ -1,0 +1,29 @@
+.cart_container{
+  display: flex;
+  border: 2px solid var(--red);
+  width: 200px;
+}
+.cart_container .img img{
+  max-width: 300px;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.cart_container img{
+ width: 100%;
+ height: 100%;
+}
+.cart_quantity_buttons{
+  display: flex;
+  gap: 3px;
+  
+}
+.cart_quantity_buttons button{
+ 
+  all:unset;
+  padding: 8px 10px;
+  background-color: var(--red);
+  color: white;
+  border-radius: 6px;
+}

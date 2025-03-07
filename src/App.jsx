@@ -11,7 +11,6 @@ import { Routes } from 'react-router-dom'
 import Footer from './Components/Footer'
 import ContextProvider from './Store/ContextProvide';
 import Cart from './Pages/Cart';
-import Prac from './Components/prac';
 import Signup from './Pages/Signup';
 import {} from 'firebase/auth'
 import { app } from './Firebase';
@@ -80,7 +79,7 @@ function App() {
          <Shopnowtwo></Shopnowtwo>
           </>
         } />
-        <Route path='/Prac' element={<Prac shoeData={shoeData}></Prac>}> </Route>
+
     <Route path="/cart" element={<Cart />} />
     <Route path='/Signup' element={<Signup/>}></Route>
     <Route path='/Signin' element={<Signin/>}></Route>

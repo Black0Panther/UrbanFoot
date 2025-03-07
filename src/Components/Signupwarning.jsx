@@ -20,6 +20,10 @@ const Signupwarning=()=>{
       <div class="modal-body">
         <p>To add the products into the cart please Sign up</p>
       </div>
+      <div className="login_credential">
+    Email:abc@gmail.com
+    Password:123456
+   </div>
       <div class="modal-footer">
         <button onClick={movetoSignup} type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sign Up</button>
         {/* below used data-bs-dismiss="modal" which will close the modal after click signup so signup can work */}

@@ -1,6 +1,7 @@
 import {getAuth,signInWithEmailAndPassword} from 'firebase/auth'
 import { app } from '../Firebase'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 const auth = getAuth(app)
 
 
@@ -14,6 +15,12 @@ const Signin=()=>{
         Email,
         Pass
     ).then((value)=>console.log("success")).catch((err)=>console.log("wrong"))
+}
+const nav = useNavigate();
+const [singIn,setsignIn]=useState(false)
+const handleSignin=()=>{
+     setsignIn(!singIn);
+     nav('/Mainproducts');
 }
     return <>
     <center>
@@ -35,7 +42,7 @@ const Signin=()=>{
             <input type="password" value={Pass} onChange={(e)=>setPass(e.target.value)} />
            </div>
         </form>
-        <button onClick={userSign}>Sign In</button>
+        <button onClick={()=>{userSign();handleSignin()}} style={{backgroundColor:singIn ? "green":"red"}}>Sign In</button>
      
 
 </div>

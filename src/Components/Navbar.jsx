@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { BsCart4 } from "react-icons/bs";
@@ -16,11 +16,19 @@ const Navbar=()=>{
 const toogleMenu=()=>{
       setIsOpen(!isOpen);
 }
+useEffect(() => {
+  const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser); // Updates state when user logs in or logs out
+  });
+
+  return () => unsubscribe(); // Cleanup listener on component unmount
+}, []);
   //for signout 
   const handlesignout=()=>{
-       signOut(auth);
+    signOut(auth);
        setUser(null)
-       navigate('/')
+       navigate('/');
+       window.location.reload()
   }
   
     return <>

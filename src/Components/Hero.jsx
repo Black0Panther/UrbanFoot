@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Hero=()=>{
 
     return <>
@@ -9,7 +10,7 @@ const Hero=()=>{
            
 
            <div className="Hero_btn">
-           <button >Shop Now</button>
+         <Link to={'/Mainproducts'}> <button >Shop Now</button></Link> 
            <button className="secondary_btn">Category</button>
            </div>
            <p>Also Available On</p>

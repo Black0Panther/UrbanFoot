@@ -19,10 +19,10 @@ const Mainproducts=({shoeData})=>{
         </a>
       </li>
       <li>
-       <Link to={'/'}><a href="#" class="nav-link text-white">
+       <Link to={'/'} class="nav-link text-white">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
          Home
-        </a></Link> 
+       </Link> 
       </li>
       <li>
         <a href="#" class="nav-link text-white">

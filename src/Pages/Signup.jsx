@@ -31,7 +31,7 @@ const Signup=()=>{
     <div className="signup_container">
         <img src="/images/signup_img.png" alt="" />
         <div className="signup_container2">
-        <h2>Register Now</h2>
+        <h2><b>Register Now</b></h2>
         <form action="" className="signup_form">
             <div className="email">
             <label htmlFor="">Email:</label>
@@ -42,7 +42,7 @@ const Signup=()=>{
             <input type="password" onChange={(e)=>setPass(e.target.value)} />
            </div>
         </form>
-        <button onClick={()=>{creatUser();register()}} style={{backgroundColor:Regbtn ? "green":"red"}}>Register</button>
+        <button className='signupbtn' onClick={()=>{creatUser();register()}} style={{backgroundColor:Regbtn ? "green":"red"}}>Register</button>
 
 </div>
     </div>

@@ -27,7 +27,7 @@ const handleSignin=()=>{
     <div className="signup_container">
         <img src="/images/signup_img.png" alt="" />
         <div className="signup_container2">
-        <h2>Sign In Now</h2>
+        <h2><b>Sign In Now</b></h2>
         <div className="login_credential">
     Email:abc@gmail.com
     Password:123456

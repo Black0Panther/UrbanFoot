@@ -5,7 +5,7 @@ const Mainproducts=({shoeData})=>{
     <div className="main_product">
    
     <div className="category_col">
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style={{width: "280px", height:"100vh",position:"sticky",overflowY:"auto" ,top:"0"}}>
+    <div class="sidebar d-flex flex-column flex-shrink-0 p-3 text-bg-dark" >
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <svg class="bi pe-none me-2" width="40" height="32"><use xlinkHref="#bootstrap"></use></svg>
       <span class="fs-4">Sidebar</span>

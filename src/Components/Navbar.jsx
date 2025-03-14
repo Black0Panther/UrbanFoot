@@ -35,7 +35,9 @@ useEffect(() => {
      <div className="Navbar">
 
     {/* <div className="logo"><img src="/images/brand_logo.png" alt="" /></div> */}
-    <div className="logo"><p><strong>UrbanFoot</strong></p></div>
+    <div className="logo">
+   <p ><strong>UrbanFoot</strong></p>
+      </div>
 
         <ul className={isOpen ? "options active" : "options"}>
            

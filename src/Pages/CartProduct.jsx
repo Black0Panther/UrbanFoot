@@ -27,6 +27,8 @@ const Remove=(id)=>{
     return <>
   
     <div className="cart_container">
+
+      <div className="cartproduct">
       <div className="cart_container_left">
       <img src={shoeData.img} alt="" />
       </div>
@@ -35,10 +37,13 @@ const Remove=(id)=>{
             <h4>Rs.{shoeData.price}</h4>
             <button onClick={()=>Remove(shoeData.id)}>Remove</button>
       </div>
+
+     
       <div className="container_right_right">
       <button  onClick={()=>Decrease(shoeData.id)}>-</button>
                 <button>{updatedQuantity}</button>
                 <button onClick={()=>Increase(shoeData.id)}>+</button>
+      </div>
       </div>
     </div>
     

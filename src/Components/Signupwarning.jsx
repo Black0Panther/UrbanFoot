@@ -11,7 +11,7 @@ const Signupwarning=()=>{
   }
     return <>
      <div class="modal " id="signupModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered ">
+  <div class="modal_box modal-dialog modal-dialog-centered ">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Sign Up Now</h5>

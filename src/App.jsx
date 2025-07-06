@@ -29,7 +29,7 @@ function App() {
   const [shoeData, setShoeData] = useState([]);
 
     useEffect(() => {
-        fetch("https://urban-foot-backend-production-4a93.up.railway.app/sneakers/adidas") // Adjust endpoint to your backend API
+        fetch("https://urban-foot-backend-1.onrender.com/sneakers/adidas") // Adjust endpoint to your backend API
             .then((res) => res.json())
             .then((data) =>{
               const updatedData = data.map((shoe) => ({

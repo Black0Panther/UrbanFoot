@@ -63,7 +63,7 @@ useEffect(() => {
         <Link to={'/Signin'}> <button className="login">Login</button></Link>
  
  
-    <button onClick={handlesignout}>Log Out</button>
+    <button className="log_out" onClick={handlesignout}>Log Out</button>
     
     
      </div>
